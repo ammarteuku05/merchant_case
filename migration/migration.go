@@ -16,6 +16,7 @@ type User struct {
 	FullName string
 	Email    string `gorm:"unique"`
 	Password string
+	Role     string
 	Outlet   []Outlet `gorm:"ForeignKey:UserId"`
 }
 

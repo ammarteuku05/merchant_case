@@ -50,6 +50,29 @@ func Middleware(userService user.UserService, authService auth.Service) gin.Hand
 	}
 }
 
+func AdminMiddleware(userRepository user.Repository) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		userLogin := c.MustGet("currentUser").(gin.H)
+		userID := userLogin["user_id"].(string)
+		user, err := userRepository.FindByID(userID)
+
+		if err != nil {
+			errorResponse := gin.H{"error": "error in internal middleware"}
+
+			c.AbortWithStatusJSON(500, errorResponse)
+
+			return
+		}
+		if user.Role != "Admin" {
+			errorResponse := gin.H{"error": "user login is not admin"}
+
+			c.AbortWithStatusJSON(401, errorResponse)
+			return
+		}
+
+	}
+}
+
 func CORSMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
