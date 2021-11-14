@@ -28,7 +28,7 @@ ORDER BY created_at DESC
 **Register User**
 
    ```
-INSERT INTO users(id, full_name, email, password, role created_at, updated_at)
+INSERT INTO users(id, full_name, email, password, role, created_at, updated_at)
 VALUES(?,?,?,?,?,?)
    ```
 
