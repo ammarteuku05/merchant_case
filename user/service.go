@@ -80,6 +80,7 @@ func (s *service) SaveNewUser(user entity.UserInput) (formatter.UserFormat, erro
 		FullName:  user.FullName,
 		Email:     user.Email,
 		Password:  string(genPassword),
+		Role:      "User",
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	}
@@ -105,6 +106,7 @@ func (s *service) GetUserByID(userID string) (formatter.UserFormat, error) {
 		Id:        user.Id,
 		FullName:  user.FullName,
 		Email:     user.Email,
+		Role:      user.Role,
 		Password:  user.Password,
 		CreatedAt: user.CreatedAt,
 		UpdatedAt: user.UpdatedAt,

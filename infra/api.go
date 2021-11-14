@@ -31,7 +31,7 @@ func RegisterApi(r *gin.Engine) {
 		// user
 		api.POST("/user/register", userHandler.RegisterUserHandler)
 		api.POST("/user/login", userHandler.LoginUserHandler)
-		api.GET("/users", handler.Middleware(userService, authService), userHandler.ShowAllUserHandler)
+		api.GET("/users", handler.Middleware(userService, authService), handler.AdminMiddleware(userRepository), userHandler.ShowAllUserHandler)
 		api.GET("/users/:id", handler.Middleware(userService, authService), userHandler.GetUserByIDHandler)
 		api.PUT("/users/:id", handler.Middleware(userService, authService), userHandler.UpdateUserByIDHandler)
 		api.DELETE("/users/:id", handler.Middleware(userService, authService), userHandler.DeleteUserByIDHandler)

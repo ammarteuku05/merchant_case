@@ -9,6 +9,7 @@ type UserFormat struct {
 	Id       string `json:"id"`
 	FullName string `json:"full_name"`
 	Email    string `json:"email"`
+	Role     string `json:"role"`
 }
 
 type DeleteFormat struct {
@@ -21,6 +22,7 @@ func FormatUser(user entity.User) UserFormat {
 		Id:       user.Id,
 		FullName: user.FullName,
 		Email:    user.Email,
+		Role:     user.Role,
 	}
 
 	return formatUser
