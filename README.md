@@ -11,7 +11,7 @@ For run :
 go run . 
 ```
 ## Entity Relationship Diagram
-![ERD](https://drive.google.com/file/d/11jhS05t-C-Xa7a81fDyFiR3vZbSzsmzU/view?usp=sharing "Entity Relationship Diagram")
+[Entity Relationship Diagram](https://drive.google.com/file/d/11jhS05t-C-Xa7a81fDyFiR3vZbSzsmzU/view?usp=sharing 'ERD')
 
 
 ## Data Manipulation Language 
@@ -135,11 +135,11 @@ WHERE id = ?
    ```
 
 ## Activity Diagram 
-![AD](https://drive.google.com/file/d/1cJUsI76H3o-fRoO15ilZcqjETlvPMy8q/view?usp=sharing "Activity Diagram")
+[Activity Diagram](https://drive.google.com/file/d/1cJUsI76H3o-fRoO15ilZcqjETlvPMy8q/view?usp=sharing 'Activiy Digram')
 
 
 ## Use Case Diagram 
-![UseCase](https://drive.google.com/file/d/1H2KkTsbghGbGN0DAIr3CGQTeAHbG0sFE/view?usp=sharing "Use Case Diagram")
+[Use Case Diagram](https://drive.google.com/file/d/1H2KkTsbghGbGN0DAIr3CGQTeAHbG0sFE/view?usp=sharing 'Use Case')
 
 ### add Information
 for doc api you can use in posmant/merchant.postman_collection.json
