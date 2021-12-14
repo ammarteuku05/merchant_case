@@ -1,4 +1,4 @@
-# merchant_test_case
+# merchant_case
 
 Before run This project : 
 
